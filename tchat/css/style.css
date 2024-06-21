@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 88%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-left: 6%;
+    padding-right: 6%;
+
+}
+
+.milieu{
+    height: 90%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.blanc{
+    color: white;
+}
+
+.titre{
+    font-size: 76px;
+    margin-bottom: 16px;
+}
+
+.presentation{
+    width: 46%;
+    text-align: justify;
+}
+
+.navBar{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: right;
+    padding-top: 10px;
+}
+
+.navBar ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 60px;
+    text-transform: uppercase;
+}
+
+.navBar ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.iconMenu{
+    background-color: #847B75;
+    width: 40px;
+    height: 40px;
+    margin-left: 60px;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.iconMenu:hover{
+    cursor: pointer;
+}
+
+.iconMenu #barreMenuTop {
+    transition: transform 0.4s ease;
+}
+
+.iconMenu:hover #barreMenuTop {
+    transform: translateX(-5px);
+}
+.iconMenu #barreMenuMid {
+    transition: transform 0.4s ease;
+}
+
+.iconMenu:hover #barreMenuMid{
+    transform: translateX(+5px);
+}
+.iconMenu #barreMenuBot {
+    transition: transform 0.4s ease;
+}
+
+.iconMenu:hover #barreMenuBot {
+    transform: translateX(-5px);
+}
+
+.barreMenu{
+    width: 46%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#barreMenuMid{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.boutonMilieu{
+    text-decoration: none;
+    color: #000;
+    background-color: white;
+    width: 180px;
+    padding: 12px 0;
+    border-radius: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.openTop{
+    animation: topOpen 0.3s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.openMid{
+    animation: midOpen 0.3s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.openBot{
+    animation: botOpen 0.3s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes topOpen {
+   0%{
+       transform: rotate(0deg) translateX(-5px);
+   }
+    50%{
+        transform: translateX(-7px);
+    }
+    100%{
+        transform: translateX(-7px) translateY(+8px) rotate(-90deg)  ;
+    }
+}
+
+@keyframes midOpen {
+    0%{
+        transform: translateX(+5px) rotate(0deg) ;
+    }
+
+    100%{
+        transform: translateX(0px) rotate(-90deg) ;
+    }
+}
+
+@keyframes botOpen {
+    0%{
+        transform: rotate(0deg) translateX(-5px);
+    }
+
+    50%{
+        transform: translateX(7px);
+    }
+
+    100%{
+        transform: translateX(+7px) translateY(-8px) rotate(-90deg)  ;
+    }
+ }
+
+.aProposContainer{
+    width: 88%;
+    height: 100vh;
+    background: #3C4B64;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.aProposContentContainer{
+    width: 80%;
+    height: 60%;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: start;
+
+}
+
+.aProposContentLeft{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.aProposContentMid{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.aProposContentRight{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fleche {
+    border: none;
+    outline: none;
+    background: rgba(0, 255, 0, 0);
+    cursor: pointer;
+    display: flex;
+}
+
+button {
+    height: 35px;
+    width: 35px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    padding: 1em;
+    display: flex;
+    border-radius: 25px;
+}
+
+
+button .fleche {
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 5px;
+    transition: transform 0.3s ease-out;
+    outline: none;
+}
+
+#right {
+    margin: auto 0 auto -2em;
+}
+
+#right .fleche {
+    transform:  translateX(-5px) translateY(-3px) rotate(-45deg);
+}
+
+#left {
+    z-index: 0;
+    margin: auto -2em auto 0;
+}
+
+#left .fleche {
+    transform:  translateX(+1px) translateY(-3px) rotate(135deg);
+}

@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    height: 100vh;
+}
+
+label{
+    margin-right: 10px;
+    color: white;
+    display: inline;
+}
+
+label:hover{
+    cursor: pointer;
+}
+
+.content{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 100%;
+    background-color: #33394F;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 66%;
+    background-color: #202433;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.inline{
+    flex-flow: row;
+}
+
+.rounded{
+    border-radius: 25px;
+}
+
+.height90{
+    height: 90%;
+}
+
+.chat{
+    width: 99%;
+    background-color: #202433;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    overflow-y: auto;
+}
+
+.chat>:first-child {
+    margin-top: auto !important;
+}
+
+.barre{
+    width: 99%;
+    background-color: #6C7586;
+    height: 50px;
+    display: flex;
+    flex-flow: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.inputChat{
+    width: 80%;
+    background: #6C7586;
+    border: none;
+    color: white;
+
+}
+
+.inputChat:focus{
+    outline: none;
+}
+
+.boutonChat{
+    width: 20%;
+    height: 30px;
+    background: #202433;
+    color: white;
+    border-radius: 25px;
+    border: none;
+}
+
+::placeholder {
+    color: #FFFFFF;
+}
+
+.message{
+    color: white;
+    max-width: 100%;
+    margin-left: 10px;
+
+
+}
+
+.divMessage{
+    background: #33394F;
+    margin-bottom: 2vh;
+    max-width: 60%;
+    word-break: break-all;
+    white-space: normal;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.moi{
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 812px){
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .chat{
+        width: 100%;
+        height: 100%;
+    }
+
+    body{
+        height: 100dvh;
+    }
+}
+
+.clair{
+    background: #6C7586;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.pseudoChat{
+    color: white;
+    font-size: smaller;
+    margin-bottom: 5px;
+}
+
+/* Define the styles for the scrollbar in the "zoneTxt" div */
+#zoneTxt::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+    margin-left: 10px;
+}
+
+/* Define the style of the scrollbar track in the "zoneTxt" div */
+#zoneTxt::-webkit-scrollbar-track {
+    background-color: #202433; /* Set the background color of the track */
+}
+
+#zoneTxt::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
+#pseudo{
+    background: #6C7586;
+    border: none;
+    height: 30px;
+    color: white;
+    padding-left: 5px;
+}
+
+#pseudo:focus{
+    outline: none;
+}
